@@ -6,7 +6,9 @@ import { TouchableOpacity, View, Text } from "react-native";
 // 클릭 시(onPress) 얼럿(alert)으로 텍스트 띄우기
 const MyButton = () => {
     return (
-        <TouchableOpacity onPress={() => alert('MyButton')}>
+        <TouchableOpacity
+            onPress={() => alert('MyButton')}
+            hitSlop={{ bottom: 100, top: 100, left: 100, right: 100 }}>
             <View style={{ backgroundColor: 'red', padding: 10 }}>
                 <Text style={{ fontSize: 20, color: 'white' }}>MyButton</Text>
             </View>
