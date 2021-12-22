@@ -1,6 +1,8 @@
+// 필요한 모듈({..., ...}) 불러오기(import)
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
+// 화면에 띄워줄 컴포넌트 return()
 export default function App() {
   console.log('React Native App');
   return (
@@ -12,6 +14,7 @@ export default function App() {
   );
 }
 
+// 스타일 시트
 const styles = StyleSheet.create({
   container: {
     flex: 1,
