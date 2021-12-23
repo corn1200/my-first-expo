@@ -16,9 +16,10 @@ export default function App() {
     // 해당 변화 값(event)을 출력한다
     return (
         <View style={styles.container}>
+            <Text style={[styles.text, { color: 'orange' }]}>Style Code</Text>
             <TextInput
                 onChange={event => console.log(event.nativeEvent.text)}
-                style={styles.errorText}
+                style={[styles.text, styles.errorText]}
             />
             {/* <Text style={{ fontSize: 20 }}>{addition}</Text>
             <Text style={{ fontSize: 20 }}>{multiple}</Text>
@@ -36,9 +37,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    errorText: {
+    text: {
         backgroundColor: 'black',
-        color: 'red',
+        color: 'white',
         fontSize: 20
+    },
+    errorText: {
+        color: 'red'
     }
 });
