@@ -17,7 +17,8 @@ export default function App() {
     return (
         <Container>
             <StatusBar style='auto' />
-            <Input></Input>
+            <Input placeholder="Type a message..." />
+            <Input />
         </Container>
     );
 }
