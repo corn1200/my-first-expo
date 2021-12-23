@@ -2,7 +2,7 @@
 import React from 'react';
 import { styles } from './style';
 import { StatusBar } from 'expo-status-bar';
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
 const Container = styled.View`
     flex: 1;
@@ -11,13 +11,18 @@ const Container = styled.View`
     justify-content: center;
 `;
 
-const StyledText = styled.Text`
+const cssText = css`
     font-size: 20px;
     font-weight: 600;
+`;
+
+const StyledText = styled.Text`
+    ${cssText}
     color: blue;
 `;
 
-const ErrorText = styled(StyledText)`
+const ErrorText = styled.Text`
+    ${cssText}
     color: red;
 `;
 
