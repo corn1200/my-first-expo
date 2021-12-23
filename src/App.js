@@ -10,15 +10,14 @@ export default function App() {
     // 초깃값을 지정함(useState(N))
     const [addition, setAddition] = useState(0);
     const [multiple, setMultiple] = useState(1);
+    // onPress로 state를 수정하는 함수를 넘겨줌
+    // state 가 변경 되어(set~) 화면이 리렌더링 됨
     return (
         <View style={styles.container}>
             <Text style={{ fontSize: 20 }}>{addition}</Text>
             <Text style={{ fontSize: 20 }}>{multiple}</Text>
-            <MyButton />
-            <MyButton title="MyButton 2" onPress={() => alert("2")}>
-                MyButton3
-            </MyButton>
-            <MyButton>children</MyButton>
+            <MyButton title="addition" onPress={() => setAddition(addition + 2)} />
+            <MyButton title="multiple" onPress={() => setMultiple(multiple * 2)} />
         </View>
     );
 }
