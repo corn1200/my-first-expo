@@ -18,7 +18,7 @@ export default function App() {
         <View style={styles.container}>
             <TextInput
                 onChange={event => console.log(event.nativeEvent.text)}
-                style={{ borderWidth: 1, padding: 10, fontSize: 20 }}
+                style={styles.errorText}
             />
             {/* <Text style={{ fontSize: 20 }}>{addition}</Text>
             <Text style={{ fontSize: 20 }}>{multiple}</Text>
@@ -36,4 +36,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    errorText: {
+        backgroundColor: 'black',
+        color: 'red',
+        fontSize: 20
+    }
 });
