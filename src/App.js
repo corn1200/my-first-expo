@@ -17,6 +17,10 @@ const StyledText = styled.Text`
     color: blue;
 `;
 
+const ErrorText = styled(StyledText)`
+    color: red;
+`;
+
 const StyledButton = styled.Button``;
 
 // 화면에 띄워줄 컴포넌트 return()
@@ -25,6 +29,7 @@ export default function App() {
         <Container>
             <StatusBar style='auto' />
             <StyledText style={{ color: 'red' }}>Styled components</StyledText>
+            <ErrorText>Error !!</ErrorText>
             <StyledButton title="Styled" onPress={() => alert("styled !!")} />
         </Container>
     );
