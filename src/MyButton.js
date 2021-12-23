@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 // 함수 컴포넌트 생성
 // 부모(props)의 클릭(onPress)과 텍스트 이름(title)을 지정한다
-const MyButton = ({ title, onPress, children }) => {
+const MyButton = ({ title, onPress, children, title2 }) => {
     return (
         <TouchableOpacity
             onPress={onPress}
@@ -28,9 +28,12 @@ MyButton.defaultProps = {
 
 // 생성자에 넘겨질 값 중 title은 반드시 문자열(title: PropTypes.string)이도록,
 // onPress는 반드시 함수(onPress: PropTypes.func)이도록 설정
+// title2는 반드시 문자열이어야 하며 반드시 
+// 넘어와야 한다(title2: PropTypes.string.isRequired)
 MyButton.PropTypes = {
     title: PropTypes.string,
-    onPress: PropTypes.func
+    onPress: PropTypes.func,
+    title2: PropTypes.string.isRequired
 }
 
 // 함수 컴포넌트(MyButton) 호출(export)
