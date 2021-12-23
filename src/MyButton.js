@@ -4,8 +4,7 @@ import { TouchableOpacity, View, Text } from "react-native";
 
 // 함수 컴포넌트 생성
 // 부모(props)의 클릭(onPress)과 텍스트 이름(title)을 지정한다
-// 생성자에서 기본 값 지정
-const MyButton = ({ title = "title", onPress = () => { }, children }) => {
+const MyButton = ({ title, onPress, children }) => {
     return (
         <TouchableOpacity
             onPress={onPress}
@@ -19,6 +18,12 @@ const MyButton = ({ title = "title", onPress = () => { }, children }) => {
         </TouchableOpacity>
     );
 };
+
+// 기본 생성자에 넘겨 줄 값을 오브젝트 형태로 설정
+MyButton.defaultProps = {
+    title: 'default',
+    onPress: () => alert('default')
+}
 
 // 함수 컴포넌트(MyButton) 호출(export)
 export default MyButton;
