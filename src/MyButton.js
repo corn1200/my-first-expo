@@ -11,7 +11,9 @@ const MyButton = props => {
             pressRetentionOffset={{ bottom: 10, top: 10, left: 10, right: 10 }}
         >
             <View style={{ backgroundColor: 'red', padding: 10, margin: 10 }}>
-                <Text style={{ fontSize: 20, color: 'white' }}>{props.title}</Text>
+                <Text style={{ fontSize: 20, color: 'white' }}>
+                    {props.children || props.title}
+                </Text>
             </View>
         </TouchableOpacity>
     );
