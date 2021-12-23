@@ -1,7 +1,8 @@
 // 필요한 모듈({..., ...}) 불러오기(import)
-import { StyleSheet, View, Text, TextInput } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 import MyButton from './MyButton';
 import React, { useState } from 'react';
+import {styles, orangeText} from './style';
 
 // 화면에 띄워줄 컴포넌트 return()
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
     // 해당 변화 값(event)을 출력한다
     return (
         <View style={styles.container}>
-            <Text style={[styles.text, { color: 'orange' }]}>Style Code</Text>
+            <Text style={[styles.text, orangeText]}>Style Code</Text>
             <TextInput
                 onChange={event => console.log(event.nativeEvent.text)}
                 style={[styles.text, styles.errorText]}
@@ -28,21 +29,3 @@ export default function App() {
         </View>
     );
 }
-
-// 스타일 시트
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    text: {
-        backgroundColor: 'black',
-        color: 'white',
-        fontSize: 20
-    },
-    errorText: {
-        color: 'red'
-    }
-});
