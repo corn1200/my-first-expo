@@ -6,7 +6,7 @@ import MyButton from './MyButton';
 export default function App() {
     return (
         <View style={styles.container}>
-            <MyButton title="MyButton 1" onPress={() => alert("1")} />
+            <MyButton />
             <MyButton title="MyButton 2" onPress={() => alert("2")}>
                 MyButton3
             </MyButton>

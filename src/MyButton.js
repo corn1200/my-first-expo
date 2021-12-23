@@ -4,15 +4,16 @@ import { TouchableOpacity, View, Text } from "react-native";
 
 // 함수 컴포넌트 생성
 // 부모(props)의 클릭(onPress)과 텍스트 이름(title)을 지정한다
-const MyButton = props => {
+// 생성자에서 기본 값 지정
+const MyButton = ({ title = "title", onPress = () => { }, children }) => {
     return (
         <TouchableOpacity
-            onPress={props.onPress}
+            onPress={onPress}
             pressRetentionOffset={{ bottom: 10, top: 10, left: 10, right: 10 }}
         >
             <View style={{ backgroundColor: 'red', padding: 10, margin: 10 }}>
                 <Text style={{ fontSize: 20, color: 'white' }}>
-                    {props.children || props.title}
+                    {children || title}
                 </Text>
             </View>
         </TouchableOpacity>
