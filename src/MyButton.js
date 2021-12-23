@@ -1,6 +1,7 @@
 // 필요한 모듈({..., ...})을 불러오기(import)
 import React from "react";
 import { TouchableOpacity, View, Text } from "react-native";
+import PropTypes from 'prop-types';
 
 // 함수 컴포넌트 생성
 // 부모(props)의 클릭(onPress)과 텍스트 이름(title)을 지정한다
@@ -23,6 +24,13 @@ const MyButton = ({ title, onPress, children }) => {
 MyButton.defaultProps = {
     title: 'default',
     onPress: () => alert('default')
+};
+
+// 생성자에 넘겨질 값 중 title은 반드시 문자열(title: PropTypes.string)이도록,
+// onPress는 반드시 함수(onPress: PropTypes.func)이도록 설정
+MyButton.PropTypes = {
+    title: PropTypes.string,
+    onPress: PropTypes.func
 }
 
 // 함수 컴포넌트(MyButton) 호출(export)
